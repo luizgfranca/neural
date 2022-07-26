@@ -26,7 +26,7 @@ int main(void) {
 
     for(int i = 0; i < input_size; i ++) {
         for(int j = 0; j < neuron_count; j ++) {
-            results[i] += weights[j][i] * inputs[i];
+            results[j] += weights[j][i] * inputs[i];
         }
     }
 
@@ -36,7 +36,7 @@ int main(void) {
 
     std::cout << "RESULTS\n";
     for(int i = 0; i < neuron_count; i ++) {
-        std::cout << i << results[i] << "\n";
+        std::cout << i << " -> " << results[i] << "\n";
     }
 
     return 0;
